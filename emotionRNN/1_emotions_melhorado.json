@@ -1,0 +1,11 @@
+{
+  "total_frames": 57,
+  "total_predicoes": 4,
+  "emocao_predominante": "Feliz",
+  "distribuicao_emocoes": {
+    "Feliz": 4
+  },
+  "porcentagens": {
+    "Feliz": 100.0
+  },
+  "confianca_media": 

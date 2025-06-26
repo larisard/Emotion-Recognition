@@ -1,0 +1,15 @@
+{
+  "total_frames": 158,
+  "total_predicoes": 20,
+  "emocao_predominante": "Feliz",
+  "distribuicao_emocoes": {
+    "Feliz": 8,
+    "Raiva": 5,
+    "Surpresa": 7
+  },
+  "porcentagens": {
+    "Feliz": 40.0,
+    "Raiva": 25.0,
+    "Surpresa": 35.0
+  },
+  "confianca_media": 
