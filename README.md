@@ -22,5 +22,6 @@ Sistema de Reconhecimento de emoções através da análise de imagens sequencia
 - Imagens: Imagens utilizadas na monografia.
   
 - Arquivo PDF da monografia desenvolvida.
-- 
+
+  
 :construction: Projeto em construção :construction:
