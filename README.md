@@ -23,9 +23,13 @@ Sistema de Reconhecimento de emoções através da análise de imagens sequencia
 * `Resultados - Treino`: Armazena os resultados obtidos durante a fase de treinamento com o conjunto de teste.
 * `Resultados - Aplicação`: Guarda os resultados gerados pela execução da aplicação final.
   
-# Imagens: Imagens utilizadas na monografia.
+# Imagens: 
+
+Imagens utilizadas na monografia.
   
-# LR_2025_06_26_larissa_sardinha_monografia_Larissa_Sardinha: Arquivo PDF da monografia desenvolvida.
+# LR_2025_06_26_larissa_sardinha_monografia_Larissa_Sardinha: 
+
+Arquivo PDF da monografia desenvolvida.
 
   
 :construction: Projeto em construção :construction:
