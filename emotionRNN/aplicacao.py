@@ -15,7 +15,7 @@ from collections import Counter, deque
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-class HOGFeatureExtractorMelhorado:    
+class HOGFeatureExtractor:    
     @staticmethod
     def calcularGradiente(imagem):
         imagem = cv2.GaussianBlur(imagem.astype(np.float32), (3, 3), 0)
@@ -30,7 +30,7 @@ class HOGFeatureExtractorMelhorado:
     def calcularHistogramaCelula(imagens, tamanho_imagem=(48,48), tamanho_bloco=2, tamanho_celula=6, bins=12):
         hog_vetores = []
         
-        print(f"Calculando HOG melhorado para {len(imagens)} frames...")
+        print(f"Calculando HOG para {len(imagens)} frames...")
         for img in tqdm(imagens, desc="Enhanced HOG Features"):
             if img.shape != tamanho_imagem:
                 img = cv2.resize(img, tamanho_imagem, interpolation=cv2.INTER_AREA)
@@ -39,7 +39,7 @@ class HOGFeatureExtractorMelhorado:
             img = (img - img.mean()) / (img.std() + 1e-6)
             img = (img - img.min()) / (img.max() - img.min() + 1e-6) * 255
 
-            magnitude, angulo = HOGFeatureExtractorMelhorado.calcularGradiente(img)
+            magnitude, angulo = HOGFeatureExtractor.calcularGradiente(img)
 
             altura, largura = img.shape
             celula_x = largura // tamanho_celula
@@ -106,7 +106,7 @@ class HOGFeatureExtractorMelhorado:
 class EmotionVideoDetector:
     def __init__(self, model_path, scalers_path=None):
 
-        print("Inicializando detector melhorado...")
+        print("Inicializando detector ...")
         
         self.model = load_model(model_path)
         print(f"Modelo carregado: {model_path}")
@@ -407,7 +407,7 @@ class EmotionVideoDetector:
             raise ValueError("Nenhum frame foi extraído do vídeo")
         
         # Extrair features HOG 
-        hog_features = HOGFeatureExtractorMelhorado.calcularHistogramaCelula(
+        hog_features = HOGFeatureExtractor.calcularHistogramaCelula(
             frames_processados, 
             tamanho_imagem=self.tamanho_imagem,
             tamanho_bloco=2, 
@@ -599,7 +599,7 @@ class EmotionVideoDetector:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Detector de Emoções Melhorado v2.0 - Processamento de Vídeos",
+        description="Detector de Emoções",
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
     
@@ -628,7 +628,7 @@ def main():
     
     if args.output is None:
         input_path = Path(args.input_video)
-        output_path = input_path.parent / f"{input_path.stem}_emotions_melhorado{input_path.suffix}"
+        output_path = input_path.parent / f"{input_path.stem}{input_path.suffix}"
     else:
         output_path = Path(args.output)
     
