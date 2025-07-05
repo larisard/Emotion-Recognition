@@ -8,8 +8,6 @@ Sistema de Reconhecimento de emoções através da análise de imagens sequencia
 
 - Ferramentas: Linguagem Python, Bibliotecas TensorFlow, Numpy, Keras e OpenCV.
 
-Claro, aqui está o conteúdo formatado para o seu `README.md`:
-
 # EmotionRNN
 
 ## Arquivos
