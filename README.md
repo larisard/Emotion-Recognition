@@ -17,17 +17,18 @@ Sistema de Reconhecimento de emoções através da análise de imagens sequencia
 * `haarcascade_frontalface_default.xml`: Arquivo de modelo pré-treinado do Haar Cascade, utilizado para a detecção de faces.
 * `classificador_emocaoLS.keras`: O arquivo do modelo classificador de emoções treinado e pronto para uso.
 
+## Como usar a aplicação:
+
+No terminal digite  `python aplicacao.py nome_video.mp4`, onde 
+nome_video.mp4 deve ser trocado pelo nome do vídeo a ser analisado
+
 ## Pastas
 
 * `S4 Stimuli (Video-clips)`: Contém a base de dados utilizada para o treinamento e validação do modelo, proveniente do Kdef-dyn.
 * `Resultados - Treino`: Armazena os resultados obtidos durante a fase de treinamento com o conjunto de teste.
 * `Resultados - Aplicação`: Guarda os resultados gerados pela execução da aplicação final.
   
-# Imagens: 
-
-Imagens utilizadas na monografia.
-  
-# LR_2025_06_26_larissa_sardinha_monografia_Larissa_Sardinha: 
+# monografia_Larissa_Sardinha: 
 
 Arquivo PDF da monografia desenvolvida.
 
